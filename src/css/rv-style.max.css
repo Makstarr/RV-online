@@ -1828,9 +1828,6 @@ body>.rv-footer {
     height: 1.7rem;
     width: 3rem
 }
-.mobile-menu::-webkit-scrollbar{
-    display: none!important;
-}
 
 .mobile-menu .menu-btn::before,
 .mobile-menu .menu-btn:after {

@@ -3,4 +3,4 @@
 
 # CMS Wordpress. Кастомная тема: webpack, scss, jquery.
 
-#Вторая часть проекта - информационный сайт: https://github.com/Makstarr/RV
+# Вторая часть проекта - информационный сайт: https://github.com/Makstarr/RV

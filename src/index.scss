@@ -45,6 +45,9 @@ a.light-gray-btn, input.light-gray-btn{
     width: $sidebarWidth;
     height: calc(100% - 70px);
     overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none!important;
+    }
     flex-direction: column;
     align-items: center;
     justify-content: space-between;

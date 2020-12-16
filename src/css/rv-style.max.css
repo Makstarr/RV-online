@@ -1816,6 +1816,10 @@ body>.rv-footer {
     overflow: scroll
 }
 
+.mobile-menu__container::-webkit-scrollbar{
+    display: none!important;
+}
+
 .mobile-menu .menu-btn {
     position: relative;
     padding: 0;
@@ -1823,6 +1827,9 @@ body>.rv-footer {
     align-items: center;
     height: 1.7rem;
     width: 3rem
+}
+.mobile-menu::-webkit-scrollbar{
+    display: none!important;
 }
 
 .mobile-menu .menu-btn::before,
@@ -1903,6 +1910,11 @@ body>.rv-footer {
     width: 33.3%;
     height: 100%;
     border-left: 1px solid var(--borderColor)
+}
+.mobile-menu__nav::-webkit-scrollbar,
+.mobile-menu__online::-webkit-scrollbar,
+.mobile-menu__info::-webkit-scrollbar{
+    display: none!important;
 }
 
 .mobile-menu__info {

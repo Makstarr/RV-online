@@ -1,0 +1,210 @@
+.form {
+    .wpcf7-response-output {
+        border-radius: 10px;
+        width: 100%;
+        margin: 0;
+        padding: .5em;
+    }
+
+    span.wpcf7-list-item {
+        margin: 0;
+
+    }
+
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+
+    & br {
+        display: none;
+    }
+
+    .rv-h3 {
+        font-size: 1.5em;
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    input,
+    textarea {
+        font-family: $myFont;
+        font-size: 1em;
+        padding: .5em;
+        border-radius: 10px;
+        margin: .5em 0;
+        transition: all .4s;
+        background-color: var(--backColor);
+        border: 1.5px solid var(--borderColor);
+        box-shadow: var(--shadow);
+        color: var(--textColor);
+        &:active, &:focus{
+            color: var(--textColor);
+        }
+        outline: none;
+
+        &:focus,
+        &:active {
+            border: 1.5px solid $myBtnGreen;
+            outline: none;
+        }
+    }
+
+    &__textarea {
+
+        textarea,
+        span {
+            width: 100%;
+            grid-column: 1 / -1;
+        }
+    }
+
+    input[type="submit"] {
+        border: none !important;
+        outline: none !important;
+        display: block;
+        font-size: 1.5em;
+        line-height: 2em;
+        padding: 0 2em;
+        margin: 1em auto;
+        font-weight: 500;
+        color: $myBtnGreenText;
+        background-color: $myBtnGreen;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $myOrange;
+
+        }
+
+        cursor: pointer;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        label,
+        input,
+        span {
+            display: block;
+            width: 100%;
+        }
+
+        label:nth-of-type(1) {
+            grid-column: 1 / 2;
+        }
+
+        label:nth-of-type(2) {
+            grid-column: 2 / 3;
+        }
+
+        label:nth-of-type(3) {
+            grid-column: 3 / 4;
+        }
+    }
+
+    input[type="checkbox"] {
+        position: fixed !important;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .wpcf7-list-item-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: .8em;
+        cursor: pointer;
+
+        &::before {
+            transition: all .2s;
+            content: "";
+            margin: 1em 1em 1em 0;
+            width: 1em;
+            height: 1em;
+            background-color: var(--backColor);
+            border-radius: 5px;
+            border: 1.5px solid var(--borderColor);
+
+        }
+
+    }
+
+    input:checked+.wpcf7-list-item-label::before {
+        background-color: $myBtnGreen;
+        border-color: $myBtnGreen;
+    }
+
+    input:active+.wpcf7-list-item-label::before {
+        background-color: $myBlue;
+    }
+}
+
+.subscribe-form {
+    .wpcf7-response-output {
+        display: none !important;
+
+    }
+
+    input[type="submit"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .form {
+        &__row {
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .form {
+        &__row {
+            gap: 5px;
+
+            label,
+            input,
+            span,
+            textarea {
+                font-size: .9em;
+            }
+
+            label:nth-of-type(1) {
+                grid-column: 1 / 2;
+            }
+
+            label:nth-of-type(2) {
+                grid-column: 2 / 3;
+            }
+
+            label:nth-of-type(3) {
+                grid-column: 3 / 4;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .form {
+        .wpcf7-list-item-label {
+            font-size: .6em;
+        }
+
+        input[type="submit"] {
+            font-size: 1em;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+
+
+a.big-button {
+  margin: 60px auto;
+  background-color: $myOrange;
+  color: $myBtnOrangeText;
+  display: block;
+
+  &:hover {
+      background-color: $myBtnGreen;
+      color: $myBtnGreenText;
+  }
+
+  transition: all .4s;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2em;
+  padding: .5em;
+  min-width: 300px;
+  max-width: 600px;
+  width: 80%;
+  text-align: center;
+
+  border-radius: 10px;
+}
+@media(max-width:600px){
+  a.big-button {
+    font-size: 1.5em;
+  }
+
+}

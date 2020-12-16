@@ -1,0 +1,255 @@
+$myFont:'Roboto',
+sans-serif;
+$myLineHeight: 1.5;
+$myFontSize: 14px;
+
+$sidebarWidth: 220px;
+$sidebarFontSize: 16px;
+$containerWidth: calc(100% - 220px);
+
+$BIGsidebarWidth: 300px;
+$BIGsidebarFontSize: 18px;
+$BIGcontainerWidth: calc(100% - 300px);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "./scss-modules/colors";
+@import "./css/slick.css";
+@import "./css/reset.css";
+
+@import "./scss-modules/colors";
+
+//Wordpress styles
+@import "./css/style.css";
+//@import "./css/style.min.css";
+//@import "./css/style-rtl.css";
+
+@import "./css/rv-style.max.css";
+
+body {
+    padding: 0;
+}
+a.light-gray-btn, input.light-gray-btn{
+    color: var(--grayBtnTextColor);
+}
+.rv-sidebar {
+    display: none;
+    font-size: $sidebarFontSize;
+    transition: background 300ms ease-in-out, color 200ms ease;
+    position: fixed;
+    background-color: var(--headerColor);
+    top: 70px;
+    left: 0;
+    z-index: 9;
+    padding: 1rem;
+    width: $sidebarWidth;
+    height: calc(100% - 70px);
+    overflow: scroll;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__top {
+        font-size: .9em;
+    }
+
+    &__menu ul {
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            opacity: .6;
+            display: block;
+            padding: 1em 0;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+    }
+
+    .light-gray-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    .color-social-icons {
+        a {
+            width: 2em;
+            height: 2em;
+            font-size: .6em;
+            border-radius: 10px;
+
+        }
+
+        .yt svg {
+            width: .7em;
+            height: .7em;
+        }
+
+        .wa {
+
+            svg {
+                width: 1.32m;
+                height: 1.2em;
+            }
+        }
+    }
+}
+
+.rv-header {
+    .search-form {
+        display: none;
+    }
+
+    z-index: 99;
+    box-shadow: none;
+    padding-left: 0;
+    height: 70px;
+
+    &__container {
+        max-width: none;
+    }
+
+    a.light-gray-btn {
+        margin: 0 .5em;
+    }
+}
+
+.rv-footer {
+    margin-bottom: 0;
+    .description-with-header{
+        padding-bottom: 7px;
+    }
+}
+
+.rv-right-col {
+
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+
+    .rv-main {
+        margin: 70px auto 0;
+    }
+
+    .rv-footer {
+        //border-left: 1px solid var(--softgrayBtnColor);
+        background-color: var(--headerColor);
+    }
+}
+
+@media (min-width: 1000px) {
+    .rv-header {
+        padding-left: 1rem;
+    }
+
+    .rv-sidebar{
+        display: flex;
+    }
+    .rv-right-col {
+        width: $containerWidth;
+        margin-left: $sidebarWidth;
+    }
+    @media screen and (max-width: 1300px) {
+        
+    
+    .rv-footer{
+        font-size: 14px!important;
+        &__column{
+            width: 32%;
+        }
+        .color-social-icons{
+            .wa svg{
+                width: 1.4em;
+                height: 1.4em;
+            }
+            .yt svg{
+                width: .7em;
+                height: .7em;
+            }
+        }
+        .subscribe-form{
+            input[type="submit"]{
+                font-size: .6em!important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1500px) {
+        
+    
+    .rv-footer{
+        font-size: 16px!important;
+        &__column{
+            width: 30%;
+        }
+        
+}
+}
+}
+@media (min-width: 850px) {
+
+.rv-header {
+    .search-form {
+        display: block;
+        width: 40vw;
+        margin-right: 5vw;
+
+        form,
+        input {
+            width: 100%;
+        }
+    }
+    a.light-gray-btn {
+        margin: 0 2em;
+    }
+
+}
+}
+@media (min-width: 1620px) {
+
+    .rv-sidebar {
+        padding: 2rem;
+        font-size: $BIGsidebarFontSize;
+        width: $BIGsidebarWidth;
+
+    }
+
+    .rv-right-col {
+        width: $BIGcontainerWidth;
+        margin-left: $BIGsidebarWidth;
+    }
+
+    .rv-header {
+        .search-form {
+            width: 40vw;
+            margin-right: 20vw;
+
+            form,
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-height: 740px){
+    .rv-sidebar{
+        &__top{
+            margin-bottom: .6em;
+        }
+        &__menu ul li a{
+            padding: .4em 0;
+        font-size: 1em;}
+    }
+}
+@import "./scss-modules/adaptive";

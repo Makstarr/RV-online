@@ -1,0 +1,120 @@
+
+$vkColor: #2787F5;
+$fbColor: #3B5998;
+$waColor: #25D366;
+$ytColor: #FC0D1B;
+
+
+$myPink: #cc3366;
+$myPink2: #ff0066;
+$myRed:  #cc0033;
+$myGreen: #33FF33;
+$myOrange: #ff9100;
+$myBlue: #3333FF;
+$myYellow: #FFFF33;
+$myBtnOrangeText: #fff;
+$myBtnGreen: #8CF225;
+$myBtnGreenText: #181818;
+$mySoftPink: #cc5a80;
+$mySoftPink2: #fa64a0;
+$mySoftRed:  #ff4271;
+:root {
+  --backColorDark: #121212;
+  --sliderColorDark: #33FF33;
+  --sliderColorLight: #333333;
+  --reviewColorDark: #34195554;
+  --reviewColorLight: #FCFCFC;
+  --helpImgLight: block;
+  --helpImgDark: none;
+  --infoTextColorDark: #464646;
+  --infoTextColorLight: #373737;
+  --color-mode: 'light';
+  --backColorDark: #121212;
+  --backColorLight: #F9F9F9;
+  --headerColorDark: #181818;
+  --headerColorLight: #FFFFFF;
+  --shadowDark: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadowLight: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  --grayBtnColorDark: #000;
+  --grayBtnColorLight: #F6f6f6;
+  --softgrayBtnColorDark: #000;
+  --softgrayBtnColorLight: #f0f0f0;
+  --inputColorDark: #202020;
+  --inputColorLight: #f1f1f1;
+  --grayBtnTextColorDark: #9C9C9C;
+  --grayBtnTextColorLight: #000000;
+  --menuColorDark: #f8f8f8;
+  --menuColorLight: #000000;
+  --textColorDark: #FFFFFF;
+  --textColorLight: #141414;
+
+  --borderColorDark: #383838;
+  --borderColorLight: #bebebe;
+
+  --footerborderColorLight: #EAEAEA;
+  --footerColorDark: #dbdbdb00;
+  --themeIconColor: rgb(34, 34, 34);
+  --backcolor: var(--backColorLight);
+  --headerColor: var(--headerColorLight);
+  --inputColor: var(--inputColorLight);
+  --grayBtnColor: var(--grayBtnColorLight);
+  --softgrayBtnColor: var(--softgrayBtnColorLight);
+  --grayBtnTextColor: var(--grayBtnTextColorLight);
+  --menuColor: var(--menuColorLight);
+  --textColor: var(--textColorLight);
+  --borderColor: var(--borderColorLight);
+  --footerborderColor: var(--footerborderColorLight);
+  --shadow: var(--shadowLight);
+  --infoTextColor: var(--infoTextColorLight);
+  --helpImg: var(--helpImgLight);
+  --helpImg2: var(--helpImgDark);
+  --reviewColor: var(--reviewColorLight);
+  --sliderColor: var(--sliderColorLight)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --color-mode: 'dark'
+  }
+
+  :root:not([data-user-color-scheme]) {
+      --themeIconColor: #FFFF33;
+      --backcolor: var(--backColorDark);
+      --headerColor: var(--headerColorDark);
+      --inputColor: var(--inputColorDark);
+      --grayBtnColor: var(--grayBtnColorDark);
+      --softgrayBtnColor: var(--softgrayBtnColorDark);
+      --grayBtnTextColor: var(--grayBtnTextColorDark);
+      --menuColor: var(--menuColorDark);
+      --textColor: var(--textColorDark);
+      --borderColor: var(--borderColorDark);
+      --footerborderColor: var(--footerColorDark);
+      --shadow: var(--shadowDark);
+      --infoTextColor: var(--infoTextColorDark);
+      --helpImg: var(--helpImgDark);
+      --helpImg2: var(--helpImgLight);
+      --reviewColor: var(--reviewColorDark);
+      --sliderColor: var(--sliderColorDark)
+  }
+}
+
+[data-user-color-scheme='dark'] {
+  --themeIconColor: #FFFF33;
+  --backcolor: var(--backColorDark);
+  --headerColor: var(--headerColorDark);
+  --grayBtnColor: var(--grayBtnColorDark);
+  --softgrayBtnColor: var(--softgrayBtnColorDark);
+  --inputColor: var(--inputColorDark);
+  --grayBtnTextColor: var(--grayBtnTextColorDark);
+  --menuColor: var(--menuColorDark);
+  --textColor: var(--textColorDark);
+  --borderColor: var(--borderColorDark);
+  --footerborderColor: var(--footerColorDark);
+  --shadow: var(--shadowDark);
+  --helpImg: var(--helpImgDark);
+  --infoTextColor: var(--infoTextColorDark);
+  --helpImg: var(--helpImgDark);
+  --helpImg2: var(--helpImgLight);
+  --reviewColor: var(--reviewColorDark);
+  --sliderColor: var(--sliderColorDark)
+}
